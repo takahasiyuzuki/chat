@@ -23,8 +23,6 @@ Route::get('/', function () {
 // メニュー一覧
 Route::get('menu/list', [MenuController::class, 'list'])->name('menu/list');
 // チャット
-Route::get('chat', [ChatController::class, 'list'])->name('chat');
+Route::get('chat', [ChatController::class, 'list'])->;
 // ユーザー名登録
-Route::match('user/create', [UserController::class, 'store'])->name('user/create');
-// 背景画像
-Route::match('chat/background', [ChatController::class, 'background'])->name('chat/background');
+Route::match('user/create', [UserController::class, 'store']);

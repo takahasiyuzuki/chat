@@ -11,7 +11,7 @@
         TNGチャットルーム
     </h1>
 
-    <a href="{{ route('chat') }}">
+    <a href="{{ route('') }}">
         ユーザー１ルーム
     </a><br/>
     <a href="{{ route('chat') }}">
@@ -20,7 +20,7 @@
     <a href="{{ route('user/create') }}">
         ユーザー名登録
     </a><br/>
-    <a href="{{ route('chat/background') }}">
+    <a href="">
         背景画像設定
     </a><br/>
 </body>

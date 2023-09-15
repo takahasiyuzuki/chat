@@ -20,7 +20,7 @@
     <a href="{{ route('user/create') }}">
         ユーザー名登録
     </a><br/>
-    <a href="{{ route('chat/background') }}">
+    <a href="{{ route('user/create') }}">
         背景画像設定
     </a><br/>
 </body>
