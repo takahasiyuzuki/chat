@@ -43,10 +43,10 @@ class UserService
         }
     }
 
-    /**
+    /***
      * 背景画像登録用に整形
      *
-     * @param collection $users ユーザー情報
+     * @param collection $users
      *
      * @return collection
      */
@@ -54,7 +54,12 @@ class UserService
     {
         try {
             if (!empty($users)) {
-                return $this->formattedBackgroundInformation($users);
+                $background_informations = [];
+                foreach ($users as $key => $user) {
+                    $background_informations[$key]['name'] = $user->name;
+                    $background_informations[$key]['src'] = $user->image->src ?? '';
+                }
+                return $background_informations;
             }
         } catch(\Exception $e) {
             throw Exception($e);
@@ -62,20 +67,6 @@ class UserService
     }
 
     /**
-     * 背景情報をコレクション化して返す
      *
-     * @param collection $users ユーザー情報
-     *
-     * @return collection
      */
-    protected function formattedBackgroundInformation($users)
-    {
-        $background_informations = [];
-        foreach ($users as $key => $user) {
-            $background_informations[$key]['name'] = $user->name;
-            $background_informations[$key]['src'] = $user->image->src ?? '';
-        }
-
-        return collect($background_informations);
-    }
 }

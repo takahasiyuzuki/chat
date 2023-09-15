@@ -43,10 +43,10 @@ class UserService
         }
     }
 
-    /**
+    /***
      * 背景画像登録用に整形
      *
-     * @param collection $users ユーザー情報
+     * @param collection $users
      *
      * @return collection
      */
@@ -54,7 +54,7 @@ class UserService
     {
         try {
             if (!empty($users)) {
-                return $this->formattedBackgroundInformation($users);
+                return $this->formattedBackgroundInformation(4users);
             }
         } catch(\Exception $e) {
             throw Exception($e);
@@ -62,9 +62,9 @@ class UserService
     }
 
     /**
-     * 背景情報をコレクション化して返す
      *
-     * @param collection $users ユーザー情報
+     *
+     * @param collection $users
      *
      * @return collection
      */

@@ -28,7 +28,7 @@ class UserController extends Controller
         // ユーザー名入力値
         $input_user_name = $request->input('name');
 
-        // ユーザー情報登録
+        // ユーザー名登録処理
         if (!empty($input_user_name)) {
             $this->userService->store($input_user_name);
         }

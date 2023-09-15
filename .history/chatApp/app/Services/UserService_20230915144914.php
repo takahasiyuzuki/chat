@@ -43,7 +43,7 @@ class UserService
         }
     }
 
-    /**
+    /***
      * 背景画像登録用に整形
      *
      * @param collection $users ユーザー情報

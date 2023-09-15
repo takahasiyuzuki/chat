@@ -69,7 +69,7 @@ class ChatController extends Controller
         $users = $this->userService->getList();
 
         // 背景画像登録用にフォーマット整形
-        $background_informations = $this->userService->formattedBackgroundInformations($uses);
+        $background_informations = $this->userService->formattedBackgroundInformations();
 
         return view('chat/background', compact('background_informations'));
     }
