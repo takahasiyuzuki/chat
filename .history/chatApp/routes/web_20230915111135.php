@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('menu/list', [MenuController::class, 'list']);
+Route::get('menu/list', 'MenuController@list');
