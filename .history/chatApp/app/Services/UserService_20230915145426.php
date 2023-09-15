@@ -53,14 +53,16 @@ class UserService
     public function formattedBackgroundInformations($users)
     {
         try {
-            return $this->formattedBackgroundInformation($users);
+            if (!empty($users)) {
+                return $this->formattedBackgroundInformation($users);
+            }
         } catch(\Exception $e) {
             throw Exception($e);
         }
     }
 
     /**
-     * 背景情報をフォーマットに整形してコレクション化する
+     * 背景情報をコレクション化して返す
      *
      * @param collection $users ユーザー情報
      *

@@ -53,7 +53,8 @@ class UserService
     public function formattedBackgroundInformations($users)
     {
         try {
-            return $this->formattedBackgroundInformation($users);
+            if (!empty($users)) {
+                return $this->formattedBackgroundInformation($users);
         } catch(\Exception $e) {
             throw Exception($e);
         }
