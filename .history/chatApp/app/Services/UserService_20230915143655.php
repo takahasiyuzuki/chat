@@ -37,7 +37,7 @@ class UserService
     public function getList()
     {
         try {
-            return User::with('images')->all();
+            return User::with()->all();
         } catch (\Exception $e) {
             throw($e);
         }

@@ -37,7 +37,7 @@ class UserService
     public function getList()
     {
         try {
-            return User::with('images')->all();
+            return User::all();
         } catch (\Exception $e) {
             throw($e);
         }
@@ -57,7 +57,8 @@ class UserService
                 $background_informations = [];
                 foreach ($users as $key => $user) {
                     $background_informations[$key]['name'] = $user->name;
-                    $background_informations[$key]['src'] = $user->image->src ?? '';
+                    $background_informations[$key]['name'] = $user->name;
+                    $background_informations[$key]['name'] = $user->name;
                 }
                 return $background_informations;
             }

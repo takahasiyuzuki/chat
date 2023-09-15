@@ -37,14 +37,14 @@ class UserService
     public function getList()
     {
         try {
-            return User::with('images')->all();
+            return User::all();
         } catch (\Exception $e) {
             throw($e);
         }
     }
 
     /***
-     * 背景画像登録用に整形
+     *  背景画像登録用に整形
      *
      * @param collection $users
      *
@@ -57,9 +57,10 @@ class UserService
                 $background_informations = [];
                 foreach ($users as $key => $user) {
                     $background_informations[$key]['name'] = $user->name;
-                    $background_informations[$key]['src'] = $user->image->src ?? '';
+                    $background_informations[$key]['name'] = $user->name;
+                    $background_informations[$key]['name'] = $user->name;
                 }
-                return $background_informations;
+                return 
             }
         } catch(\Exception $e) {
             throw Exception($e);

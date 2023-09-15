@@ -19,6 +19,7 @@
 
     @foreach ($background_informations as $key => $background_information)
         {{ $background_informations->name }} 背景
+        @if ()
         <img src="{{ asset('image/' . $background_information->src) }}" name="image">
         <input type="hidden" name="key" value="{{ $key }}">
         <input type="file"><br/>

@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -20,8 +19,5 @@ class Image extends Model
         'image_path'
     ];
 
-    public function users()
-{
-    return $this->hasOne(User::class);
-}
+    
 }
