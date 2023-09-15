@@ -86,5 +86,6 @@
             });
         } );
     </script>
+    </script>
 </body>
 </html>
