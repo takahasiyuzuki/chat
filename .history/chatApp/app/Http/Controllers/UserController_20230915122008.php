@@ -33,7 +33,7 @@ class UserController extends Controller
         }
 
         // 現在登録されているユーザー一覧を取得
-        $users = $this->userService->getList();
+        $users = ;
 
         return view('user/input', compact('users'));
     }

@@ -11,11 +11,9 @@ class UserController extends Controller
     protected $userService;
 
     public function __construct(
-        UserService $userService,
-    ) {
-        $this->userService = $userService;
-    }
 
+    ) {
+    }
     /**
      * ユーザー名登録 入力画面
      *
@@ -29,12 +27,10 @@ class UserController extends Controller
 
         // ユーザー名登録処理
         if (!empty($input_user_name)) {
-            $this->userService->store($input_user_name);
+
         }
 
-        // 現在登録されているユーザー一覧を取得
-        $users = $this->userService->getList();
-
+        $users = [];
         return view('user/input', compact('users'));
     }
 }

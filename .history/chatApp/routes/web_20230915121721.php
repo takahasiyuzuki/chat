@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 // メニュー一覧
-Route::get('menu/list', [MenuController::class, 'list'])->name('menu.list');
+Route::get('menu/list', [MenuController::class, 'list'])->name('menu/list');
 // チャット
 Route::get('chat', [ChatController::class, 'list'])->name('chat');
 // ユーザー名登録

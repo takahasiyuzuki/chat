@@ -21,8 +21,7 @@
     <p>
         ユーザー追加
     </p><br/>
-    <form action='{{ route('user.create') }}' method='post'>
-        @csrf
+    <form>
         ユーザーネーム<input type="text" name="name" placeholder="ボブス"><input type='button' value="登録">
     </form>
 </body>

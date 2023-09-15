@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ユーザー名登録</title>
+    <title>Document</title>
 </head>
 <body>
     <h1>
@@ -20,10 +20,8 @@
 
     <p>
         ユーザー追加
-    </p><br/>
-    <form action='{{ route('user.create') }}' method='post'>
-        @csrf
-        ユーザーネーム<input type="text" name="name" placeholder="ボブス"><input type='button' value="登録">
-    </form>
+    </p>
+    
+
 </body>
 </html>
