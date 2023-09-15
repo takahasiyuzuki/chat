@@ -14,14 +14,12 @@ use App\Library\Message;
 class ChatController extends Controller
 {
     protected $userService;
-    protected $imageService;
+    protected $ImageService;
 
     public function __construct(
         UserService $userService,
-        ImageService $imageService
     ) {
         $this->userService = $userService;
-        $this->imageService = $imageService;
     }
 
     /**

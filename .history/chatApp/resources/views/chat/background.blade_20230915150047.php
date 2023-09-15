@@ -18,7 +18,7 @@
     </h1>
 
     @foreach ($background_informations as $key => $background_information)
-        {{ $background_information->name }} 背景
+        {{ $background_informations->name }} 背景
         <img src="{{ asset('image/' . $background_information->src) }}" name="image">
         <input type="hidden" name="key" value="{{ $key }}">
         <input type="file"><br/>

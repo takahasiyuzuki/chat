@@ -18,10 +18,8 @@ class ChatController extends Controller
 
     public function __construct(
         UserService $userService,
-        ImageService $imageService
     ) {
         $this->userService = $userService;
-        $this->imageService = $imageService;
     }
 
     /**

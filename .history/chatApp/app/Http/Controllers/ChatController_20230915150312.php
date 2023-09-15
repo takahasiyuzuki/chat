@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Events\MessageSent;
 use App\Http\Services\UserService;
-use App\Http\Services\ImageService;
 use App\Library\Message;
 
 /**
@@ -14,14 +13,11 @@ use App\Library\Message;
 class ChatController extends Controller
 {
     protected $userService;
-    protected $imageService;
 
     public function __construct(
         UserService $userService,
-        ImageService $imageService
     ) {
         $this->userService = $userService;
-        $this->imageService = $imageService;
     }
 
     /**
@@ -69,10 +65,6 @@ class ChatController extends Controller
      */
     public function background(Request $request)
     {
-        // POSTメソッドの場合、入力されたデータを登録
-        if ($request->isMethod("post")) {
-
-        }
         // 全ユーザー情報を取得
         $users = $this->userService->getList();
 

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Events\MessageSent;
 use App\Http\Services\UserService;
-use App\Http\Services\ImageService;
+use App\Http\Services\UserService;
 use App\Library\Message;
 
 /**
@@ -14,14 +14,12 @@ use App\Library\Message;
 class ChatController extends Controller
 {
     protected $userService;
-    protected $imageService;
+    protected $userService;
 
     public function __construct(
         UserService $userService,
-        ImageService $imageService
     ) {
         $this->userService = $userService;
-        $this->imageService = $imageService;
     }
 
     /**

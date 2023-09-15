@@ -21,7 +21,6 @@ class ChatController extends Controller
         ImageService $imageService
     ) {
         $this->userService = $userService;
-        $this->imageService = $imageService;
     }
 
     /**

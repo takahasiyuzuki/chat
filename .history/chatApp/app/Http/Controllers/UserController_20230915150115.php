@@ -26,7 +26,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         // ユーザー名入力値
-        $input_user_name = $request->input('name') ?? '';
+        $input_user_name = $request->input('name') ?? ;
 
         // ユーザー情報登録
         if (!empty($input_user_name)) {
